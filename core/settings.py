@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-zr51doxi_&sqf=u$!cpvssspwaq0%08avqfc*ce4g5@)09d23)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','web-production-8232.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1','web-production-8232.up.railway.app']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'django_ckeditor_5',
     'blog',
     'credentials',
@@ -230,3 +231,6 @@ CKEDITOR_5_CONFIGS = {
         }
     }
 }
+
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

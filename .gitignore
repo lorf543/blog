@@ -71,6 +71,8 @@ coverage.xml
 *.mo
 *.pot
 
+staticfiles
+
 # Sphinx documentation
 docs/_build/
 
