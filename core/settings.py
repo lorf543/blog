@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',  
     'django_ckeditor_5',
     'blog',
     'credentials',
@@ -62,6 +63,7 @@ LOGOUT_REDIRECT_URL = 'home'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -234,6 +236,6 @@ CKEDITOR_5_CONFIGS = {
 }
 
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 CSRF_TRUSTED_ORIGINS = ['http://*','https://web-production-8232.up.railway.app/']
