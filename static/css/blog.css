@@ -1,0 +1,427 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    background-color: #1e293b;
+    color: #d4d4d4;
+}
+
+img {
+    max-width: 55%;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+
+.hidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    /* Fondo oscuro semi-transparente */
+    color: white;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    /* Asegura que el menú esté encima de otros elementos */
+}
+
+#submenu {
+    display: none;
+}
+
+.hiden-menu {
+    margin-bottom: 125px;
+    list-style: none;
+    font-size: 2rem;
+    margin-left: -49px;
+}
+
+.hiden-menu li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.hiden-menu li a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+#menuClose {
+    background-color: #333;
+}
+
+header {
+    background-color: #0f172a;
+    color: #fff;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.logo {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.logo img {
+    width: 2.5rem;
+}
+
+.logo p a {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.logo i {
+    display: none;
+}
+
+@media screen and (na-width: 1920px) {}
+
+
+@media screen and (max-width: 600px) {
+    .logo {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+    .logo p {
+        margin-right: 1rem;
+    }
+
+    .logo i {
+        display: inline;
+        font-size: 3rem;
+    }
+
+    .navegacion {
+        display: none !important;
+    }
+
+    .contenedor-header img {
+        display: none;
+    }
+}
+
+.navbar-brand {
+    font-size: 3rem !important;
+    font-weight: 900;
+}
+
+.menu-nav {
+    padding: 11px 0;
+    background: #0f172a !important;
+    color: #fff !important;
+
+}
+
+
+
+.navegacion a {
+    text-decoration: none;
+    color: #e5e5e5;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.navegacion ul {
+    display: flex;
+    gap: 4rem;
+}
+
+.navegacion li {
+    list-style: none;
+}
+
+
+/* header 2*/
+
+
+.contenido-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 73px 0;
+}
+
+.contenedor-header h1 {
+    font-weight: 800;
+    font-size: 4.5rem;
+}
+
+
+.botones-header {
+    margin-top: 4rem;
+}
+
+
+
+.botones-header a:first-child {
+    background-color: #059669;
+    color: #fff;
+    padding: 1.3rem 2rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    margin-right: 1.5rem;
+    text-decoration: none;
+}
+
+.botones-header a:last-child {
+    background-color: #f5f5f5;
+    color: #404040;
+    padding: 1.3rem 2rem;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    margin-right: 1.5rem;
+    text-decoration: none;
+}
+
+/* Main */
+
+main {
+    display: flex !important;
+    border: 1px solid transparent;
+    background-color: #1e293b;
+    color: #d4d4d4;
+
+}
+
+.youtube {
+    margin: 0 auto;
+    border-left: 1px solid #fff;
+}
+
+.youtube h2 {
+    padding: 1rem;
+}
+
+.youtube ul li {
+    list-style: none;
+    padding: 10px 0;
+
+}
+
+.youtube ul li a {
+    text-decoration: none;
+    color: #d4d4d4;
+
+}
+
+@media screen and (max-width: 1900px) {
+    .youtube {
+        display: none;
+    }
+}
+
+.seccion-principal {
+    margin: 0 auto;
+    width: 90rem;
+    padding: 2rem 0;
+}
+
+.seccion-principal h2,
+.seccion-principal p {
+    text-align: center;
+}
+
+.seccion-principal>h2 {
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: #f5f5f5;
+}
+
+.parrafo-titulo {
+    margin-bottom: 3rem;
+}
+
+.contendor-articulos {
+    display: flex;
+    flex-direction: column;
+}
+
+.articulos {
+    border-bottom: 2px solid #525252;
+    padding: .8rem 0;
+}
+
+
+.articulos:last-child {
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+
+.articulos {
+    padding: .8rem 3rem;
+}
+
+/* Categorias */
+
+
+.etiqueta {
+    background-color: #334155;
+    color: #d4d4d4;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+}
+
+.span-lectura {
+    color: #a3a3a3;
+    font-size: 1.5rem;
+}
+
+.articulos h2 {
+    text-align: left;
+    margin: 11px 0px;
+
+}
+
+.articulos h2 a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.articulos p {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.mas-informacion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articulos a {
+    text-decoration: none;
+    color: #059669;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.contenedor-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-ver-todos {
+    text-decoration: none;
+    color: #fff;
+    background-color: #059669;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+}
+
+.btn-ver-todos:hover {
+    background-color: #10b98190;
+}
+
+
+/* Footer */
+
+
+footer {
+    background-color: #0f172a;
+    border: 1px solid transparent;
+}
+
+.contender-footer {
+    color: #fff;
+    max-width: 130rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 1rem;
+}
+
+.contender-footer ul {
+    padding: 0;
+}
+
+
+.contender-footer li {
+    list-style: none;
+
+}
+
+.contender-footer a {
+    text-decoration: none;
+    color: #d4d4d4;
+    line-height: 2;
+    font-size: 1.5rem;
+
+}
+
+.contender-footer a:hover {
+    color: #fff
+}
+
+.contender-footer2 {
+    background-color: #1e293b;
+    color: #a3a3a3;
+    padding: 1.5rem 0;
+}
+
+.footer-final {
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.form-create {
+    padding: 4rem 0;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.form-create input,
+.form-create textarea,
+.form-create select {
+    padding: 1rem;
+    font-size: 1.5rem;
+
+}
+
+@media screen and (min-width: 1900px) {
+    .form-create {
+        padding: 10rem
+    }
+}
+
+.ck {
+    color: rgb(0, 0, 0);
+}

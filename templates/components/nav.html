@@ -1,0 +1,58 @@
+{% load static %}
+<header>
+  {% comment %} <div class="container menu-nav">
+    <div class="logo">
+      <p><a href="/">Opaito</a></p>
+
+      <i id="menu-button" class="ph ph-list"></i>
+    </div> {% endcomment %}
+    <nav class="menu-nav navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+      <div class="container flex-row-reverse">
+
+        <a class="navbar-brand" href="#">Opaito</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+          <div class="h2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="{% url 'createblog' %}">Crear</a>
+              </li>
+              <li class="nav-item">
+                {% if user.request %}
+                  <a class="nav-link" href="{% url 'login_user' %}">Long In</a>
+                {% else %}
+                  <a class="nav-link" href="{% url 'logout_user' %}">Long Out</a>
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+
+          {% comment %} <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> {% endcomment %}
+
+        </div>
+        
+      </div>
+    </nav>
+
+  <section class="contenedor-header">
+    <div class="contenido-header">
+      <h1 class="d-none d-lg-inline">Opaito Blog</h1>
+      <p>
+          Una pequeña descripsion, de ti mismo deberias 
+          <br>
+          ser resumido quizas una o dos lineas...
+      </p>
+    </div>
+  </section>
+</header>

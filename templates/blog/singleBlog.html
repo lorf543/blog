@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+
+    <header>
+    <div class="container menu-nav">
+        <div class="logo">
+            <p><a href="/">Opaito</a></p>
+
+            <i id="menu-button" class="ph ph-list"></i>
+            </div>
+
+            <nav class="navegacion">
+            <ul>
+                <li><a href="#">Articulos</a></li>
+                <li><a href="#">Proyectos Django</a></li>
+                <li><a href="#">Libros</a></li>
+                <li><a href="#">Podcast</a></li>
+                <li><a href="#">Cursos</a></li>
+            </ul>
+            </nav>
+
+            <div id="menu">
+            <div id="submenu">
+                <ul class="hiden-menu">
+                <li><a href="#">Articulos</a></li>
+                <li><a href="#">Proyectos Django</a></li>
+                <li><a href="#">Libros</a></li>
+                <li><a href="#">Podcast</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li id="menuClose">X</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <div class="seccion-principal">
+        <h2>{{blog.title}}</h2>
+        <seccion class="contendor-articulos">
+          <!--1-->
+          <div class="articulos">
+            <!-- Categoria-->
+            {% for tag in blog.tags.all %}
+              <span class="etiqueta">Libros</span>
+            {% endfor %}
+            <hr>
+            {{blog.body|safe}}
+          </div>
+        </seccion>
+      </div>
+
+{% endblock content %}
