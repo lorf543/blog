@@ -39,15 +39,18 @@ def updateblog(request,slug):
     return render(request,'blog/updateblog.html', context)
 
 def createeblog(request):
-    form = BlogsForm()
     if request.method == 'POST':
-        print(form.errors)
+        form = BlogsForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('/')
+            return redirect('/')
+        else:
+            print(form.errors)  # Only print errors if the form is not valid
+    else:
+        form = BlogsForm()
         
-    context= {'form':form}
+    context = {'form': form}
+    return render(request, 'blog/updateblog.html', context)
 
-    return render(request,'blog/updateblog.html', context)
 
 
