@@ -10,7 +10,9 @@
             <span class="etiqueta">Libro</span>
             <div class="d-flex justify-content-between align-items-center">
               <h2><a href="#">{{blog.title}}</a></h2>
-              <a href="{% url 'updateblog' blog.slug %}"><i class="ph ph-pencil"></i></a>
+              {% if request.user.is_authenticated %}
+                <a href="{% url 'updateblog' blog.slug %}"><i class="ph ph-pencil"></i></a>
+              {% endif %}
             </div>
             <p>
               {{blog.body|safe|truncatechars:450}}
